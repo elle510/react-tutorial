@@ -9,12 +9,21 @@ module.exports = React.createClass({
 		var element = this.getDOMNode();
 		var context = this;
 		$(element).find("#eventsgrid").jqGrid({
+			styleUI : 'Bootstrap',
+			data: this.props.data,
 			datatype: "local",
-			colNames: ['Title'],
-			colModel: [
-				{ name: 'title', index: 'title', sortable: true, key: true }
+			colNames:['Inv No','Date', 'Client', 'Amount','Tax','Total','Notes'],
+			colModel:[
+				{name:'id',index:'id', width:60, sorttype:'int'},
+				{name:'invdate',index:'invdate', width:90, sorttype:'date', formatter:'date'},
+				{name:'name',index:'name', width:100, editable:true},
+				{name:'amount',index:'amount', width:80, align:'right',sorttype:'float', formatter:'number', editable:true},
+				{name:'tax',index:'tax', width:80, align:'right',sorttype:'float', editable:true},
+				{name:'total',index:'total', width:80,align:'right',sorttype:'float'},
+				{name:'note',index:'note', width:150, sortable:false}
 			],
-			rowNum: 3,
+			rowNum: 10,
+			rowList: [10,20,30],
 			sortname: '',
 			viewrecords: true,
 			sortorder: "desc",
@@ -25,33 +34,14 @@ module.exports = React.createClass({
 			scrollOffset: false,
 			height: '',
 			subGrid: false,
-			onSelectRow: function (rowid, status, e) {
-				Events.emit("selectRow", rowid, status, e);
-			},
 			loadComplete: function (maingrid_id) {
 				//alert(maingrid_id);
-			},
-			onPaging: function (pgButton, records) {
-				var nextPage = 1;
-
-				if (pgButton.indexOf("next") != -1) {
-					nextPage = context.props.gridData.page + 1;
-				}
-				else {
-					nextPage = context.props.gridData.page - 1;
-				}
-
-				Events.emit("changeGridData", {filters: {}, order: { sortname: "", sortorder: context.props.gridData.order.sortorder}, page: nextPage});
-			},
-			onSortCol: function (index, columnIndex, sortOrder) {
-				
-				Events.emit("changeGridData", {filters: {}, order: { sortname: "", sortorder: sortOrder}, page: context.props.gridData.page});
-
-				return 'stop';
 			}
 		});
-		//$(element).find("#eventsgrid")[0].addJSONData(this.props.eventsModel.attributes);
-		//$(element).find("#eventsgrid").jqGrid('setSelection', this.props.eventModel.attributes.title, false); 
+		/*
+		$(element).find("#eventsgrid")[0].addJSONData(this.props.eventsModel.attributes);
+		$(element).find("#eventsgrid").jqGrid('setSelection', this.props.eventModel.attributes.title, false);
+		*/
 		//$(element).find("#eventsgrid").jqGrid('sortGrid', 'title', false, context.props.gridData.order.sortorder); Bool not fired?¿?¿¿ -> Obrir cas a tirand!!!!!!
 	},
 	componentWillUpdate: function(){
