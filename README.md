@@ -49,11 +49,11 @@ synchronized browsing across multiple devices and browsers.
 .
 ├── /dist/                      # The folder for compiled output
 ├── /docs/                      # Documentation files for the project
-├── /libs/			   # javascript library
+├── /libs/                      # javascript library
 ├── /node_modules/              # 3rd-party libraries and utilities
 ├── /src/                       # The source code of the application
 │   ├── /components/            # React components
 │   └── /app.js                 # Client-side startup script
-│── package.json                # The list of 3rd party libraries and utilities
+├── package.json                # The list of 3rd party libraries and utilities
 └── webpack.config.js           # webpack module builder config file
 ```
