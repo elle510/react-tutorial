@@ -1,0 +1,8 @@
+.project
+.classpath
+.DS_Store
+npm-debug.log
+.settings
+node_modules
+webapps/META-INF/
+webapps/WEB-INF/
