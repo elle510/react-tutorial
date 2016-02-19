@@ -1,8 +1,9 @@
 .project
 .classpath
 .DS_Store
-npm-debug.log
 .settings
+.idea
+npm-debug.log
 node_modules
 webapps/META-INF/
 webapps/WEB-INF/
