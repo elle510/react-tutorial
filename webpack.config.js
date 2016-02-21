@@ -2,7 +2,7 @@ module.exports = {
 	entry: './src/app.js',
 
 	output: {
-		path: __dirname + "/dist",
+		path: __dirname + '/dist',
 		filename: 'bundle.js'
 	},
 
@@ -13,7 +13,7 @@ module.exports = {
 				exclude: /node_modules/, 
 				loader: 'babel-loader',
 				query: {
-                    presets: ["react", "es2015"],
+                    presets: ['react', 'es2015'],
                     cacheDirectory: true
                 }
 			}
