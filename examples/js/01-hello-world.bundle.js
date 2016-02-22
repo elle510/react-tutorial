@@ -27,14 +27,14 @@
 /******/ 	}
 
 
-/******/ 	// expose the controllers object (__webpack_modules__)
+/******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = modules;
 
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/js/";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -48,24 +48,20 @@
 
 	var React = __webpack_require__(1);
 	var ReactDom = __webpack_require__(158);
-	var JQGrid = __webpack_require__(159);
 
 	var Main = React.createClass({
-		displayName: 'Main',
+	    displayName: 'Main',
 
-		render: function render() {
-			return React.createElement(
-				'div',
-				null,
-				'Hello World'
-			);
-		}
+	    render: function render() {
+	        return React.createElement(
+	            'div',
+	            null,
+	            'Hello World'
+	        );
+	    }
 	});
 
-	var mydata = [{ id: '1', invdate: '2010-05-24', name: 'test', note: 'note', tax: '10.00', total: '2111.00' }, { id: '2', invdate: '2010-05-25', name: 'test2', note: 'note2', tax: '20.00', total: '320.00' }, { id: '3', invdate: '2007-09-01', name: 'test3', note: 'note3', tax: '30.00', total: '430.00' }, { id: '4', invdate: '2007-10-04', name: 'test', note: 'note', tax: '10.00', total: '210.00' }, { id: '5', invdate: '2007-10-05', name: 'test2', note: 'note2', tax: '20.00', total: '320.00' }, { id: '6', invdate: '2007-09-06', name: 'test3', note: 'note3', tax: '30.00', total: '430.00' }, { id: '7', invdate: '2007-10-04', name: 'test', note: 'note', tax: '10.00', total: '210.00' }, { id: '8', invdate: '2007-10-03', name: 'test2', note: 'note2', amount: '300.00', tax: '21.00', total: '320.00' }, { id: '9', invdate: '2007-09-01', name: 'test3', note: 'note3', amount: '400.00', tax: '30.00', total: '430.00' }, { id: '11', invdate: '2007-10-01', name: 'test', note: 'note', amount: '200.00', tax: '10.00', total: '210.00' }, { id: '12', invdate: '2007-10-02', name: 'test2', note: 'note2', amount: '300.00', tax: '20.00', total: '320.00' }, { id: '13', invdate: '2007-09-01', name: 'test3', note: 'note3', amount: '400.00', tax: '30.00', total: '430.00' }, { id: '14', invdate: '2007-10-04', name: 'test', note: 'note', amount: '200.00', tax: '10.00', total: '210.00' }, { id: '15', invdate: '2007-10-05', name: 'test2', note: 'note2', amount: '300.00', tax: '20.00', total: '320.00' }, { id: '16', invdate: '2007-09-06', name: 'test3', note: 'note3', amount: '400.00', tax: '30.00', total: '430.00' }, { id: '17', invdate: '2007-10-04', name: 'test', note: 'note', amount: '200.00', tax: '10.00', total: '210.00' }, { id: '18', invdate: '2007-10-03', name: 'test2', note: 'note2', amount: '300.00', tax: '20.00', total: '320.00' }, { id: '19', invdate: '2007-09-01', name: 'test3', note: 'note3', amount: '400.00', tax: '30.00', total: '430.00' }, { id: '21', invdate: '2007-10-01', name: 'test', note: 'note', amount: '200.00', tax: '10.00', total: '210.00' }, { id: '22', invdate: '2007-10-02', name: 'test2', note: 'note2', amount: '300.00', tax: '20.00', total: '320.00' }, { id: '23', invdate: '2007-09-01', name: 'test3', note: 'note3', amount: '400.00', tax: '30.00', total: '430.00' }, { id: '24', invdate: '2007-10-04', name: 'test', note: 'note', amount: '200.00', tax: '10.00', total: '210.00' }, { id: '25', invdate: '2007-10-05', name: 'test2', note: 'note2', amount: '300.00', tax: '20.00', total: '320.00' }, { id: '26', invdate: '2007-09-06', name: 'test3', note: 'note3', amount: '400.00', tax: '30.00', total: '430.00' }, { id: '27', invdate: '2007-10-04', name: 'test', note: 'note', amount: '200.00', tax: '10.00', total: '210.00' }, { id: '28', invdate: '2007-10-03', name: 'test2', note: 'note2', amount: '300.00', tax: '20.00', total: '320.00' }, { id: '29', invdate: '2007-09-01', name: 'test3', note: 'note3', amount: '400.00', tax: '30.00', total: '430.00' }];
-
 	ReactDom.render(React.createElement(Main, null), document.getElementById('app'));
-	ReactDom.render(React.createElement(JQGrid, { data: mydata }), document.getElementById('jqgrid'));
 
 /***/ },
 /* 1 */
@@ -3754,7 +3750,7 @@
 	    injectEventPluginOrder: EventPluginRegistry.injectEventPluginOrder,
 
 	    /**
-	     * @param {object} injectedNamesToPlugins Map from names to plugin controllers.
+	     * @param {object} injectedNamesToPlugins Map from names to plugin modules.
 	     */
 	    injectEventPluginsByName: EventPluginRegistry.injectEventPluginsByName
 
@@ -3934,7 +3930,7 @@
 	var EventPluginOrder = null;
 
 	/**
-	 * Injectable mapping from names to event plugin controllers.
+	 * Injectable mapping from names to event plugin modules.
 	 */
 	var namesToPlugins = {};
 
@@ -4055,7 +4051,7 @@
 	   *
 	   * Plugins can be injected as part of page initialization or on-the-fly.
 	   *
-	   * @param {object} injectedNamesToPlugins Map from names to plugin controllers.
+	   * @param {object} injectedNamesToPlugins Map from names to plugin modules.
 	   * @internal
 	   * @see {EventPluginHub.injection.injectEventPluginsByName}
 	   */
@@ -6648,7 +6644,7 @@
 	 * - and a `close` method that accepts the precomputation. `close` is invoked
 	 *   when the wrapped process is completed, or has failed.
 	 *
-	 * @param {Array<TransactionalWrapper>} transactionWrapper Wrapper controllers
+	 * @param {Array<TransactionalWrapper>} transactionWrapper Wrapper modules
 	 * that implement `initialize` and `close`.
 	 * @return {Transaction} Single transaction for reuse in thread.
 	 *
@@ -8513,7 +8509,7 @@
 	  ReactInjection.EventEmitter.injectReactEventListener(ReactEventListener);
 
 	  /**
-	   * Inject controllers for resolving DOM hierarchy and plugin ordering.
+	   * Inject modules for resolving DOM hierarchy and plugin ordering.
 	   */
 	  ReactInjection.EventPluginHub.injectEventPluginOrder(DefaultEventPluginOrder);
 	  ReactInjection.EventPluginHub.injectInstanceHandle(ReactInstanceHandles);
@@ -18802,7 +18798,7 @@
 	  } finally {
 	    ReactServerRenderingTransaction.release(transaction);
 	    // Revert to the DOM batching strategy since these two renderers
-	    // currently share these stateful controllers.
+	    // currently share these stateful modules.
 	    ReactUpdates.injection.injectBatchingStrategy(ReactDefaultBatchingStrategy);
 	  }
 	}
@@ -18829,7 +18825,7 @@
 	  } finally {
 	    ReactServerRenderingTransaction.release(transaction);
 	    // Revert to the DOM batching strategy since these two renderers
-	    // currently share these stateful controllers.
+	    // currently share these stateful modules.
 	    ReactUpdates.injection.injectBatchingStrategy(ReactDefaultBatchingStrategy);
 	  }
 	}
@@ -19667,74 +19663,6 @@
 
 	module.exports = __webpack_require__(3);
 
-
-/***/ },
-/* 159 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var React = __webpack_require__(1);
-
-	module.exports = React.createClass({
-		displayName: 'exports',
-
-		componentDidMount: function componentDidMount() {
-			var element = this.getDOMNode();
-			this.initJQueryPlugin();
-		},
-		initJQueryPlugin: function initJQueryPlugin() {
-			var element = this.getDOMNode();
-			var context = this;
-			$(element).find("#eventsgrid").jqGrid({
-				styleUI: 'Bootstrap',
-				data: this.props.data,
-				datatype: "local",
-				colNames: ['Inv No', 'Date', 'Client', 'Amount', 'Tax', 'Total', 'Notes'],
-				colModel: [{ name: 'id', index: 'id', width: 60, sorttype: 'int' }, { name: 'invdate', index: 'invdate', width: 90, sorttype: 'date', formatter: 'date' }, { name: 'name', index: 'name', width: 100, editable: true }, { name: 'amount', index: 'amount', width: 80, align: 'right', sorttype: 'float', formatter: 'number', editable: true }, { name: 'tax', index: 'tax', width: 80, align: 'right', sorttype: 'float', editable: true }, { name: 'total', index: 'total', width: 80, align: 'right', sorttype: 'float' }, { name: 'note', index: 'note', width: 150, sortable: false }],
-				rowNum: 10,
-				rowList: [10, 20, 30],
-				sortname: '',
-				viewrecords: true,
-				sortorder: "desc",
-				caption: "",
-				pager: '#eventsgridpager',
-				autowidth: true,
-				loadOnce: true,
-				scrollOffset: false,
-				height: '',
-				subGrid: false,
-				loadComplete: function loadComplete(maingrid_id) {
-					//alert(maingrid_id);
-				}
-			});
-			/*
-	  $(element).find("#eventsgrid")[0].addJSONData(this.props.eventsModel.attributes);
-	  $(element).find("#eventsgrid").jqGrid('setSelection', this.props.eventModel.attributes.title, false);
-	  */
-			//$(element).find("#eventsgrid").jqGrid('sortGrid', 'title', false, context.props.gridData.order.sortorder); Bool not fired?¿?¿¿ -> Obrir cas a tirand!!!!!!
-		},
-		componentWillUpdate: function componentWillUpdate() {
-			var element = this.findDOMNode(); //getDOMNode();
-			$(element).find("#eventsgrid").GridUnload();
-		},
-		componentDidUpdate: function componentDidUpdate(prevProps, prevState) {
-			var element = this.getDOMNode();
-			this.initJQueryPlugin();
-		},
-		componentWillUnmount: function componentWillUnmount() {
-			var element = this.getDOMNode();
-			$(element).find("#eventsgrid").GridUnload();
-		},
-		render: function render() {
-			return React.createElement(
-				'div',
-				null,
-				React.createElement('table', { id: 'eventsgrid' }),
-				React.createElement('div', { id: 'eventsgridpager' })
-			);
-		}
-	});
 
 /***/ }
 /******/ ]);
