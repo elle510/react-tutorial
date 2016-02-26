@@ -14,7 +14,7 @@ $ npm start                     # Compile and launch
 ### How to Build
 
 ```shell
-$ npm run build                 # or, `npm run build -- release`
+$ npm run webpack                 # or, `npm run webpack -- release`
 ```
 
 By default, it builds in a *debug* mode. If you need to build in a release

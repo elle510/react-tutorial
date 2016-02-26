@@ -2,7 +2,7 @@ var React = require('react');
 
 module.exports = React.createClass({
 	componentDidMount: function() {
-		var element = this.getDOMNode();
+		//var element = this.getDOMNode();
 		this.initJQueryPlugin();
 	},
 	initJQueryPlugin: function () {

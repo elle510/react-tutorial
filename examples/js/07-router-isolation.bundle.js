@@ -24753,7 +24753,7 @@
 	            React.createElement(
 	                'h1',
 	                null,
-	                'App 04'
+	                'App isolation'
 	            ),
 	            React.createElement(
 	                'ul',
@@ -24815,7 +24815,7 @@
 	        return React.createElement(
 	            'div',
 	            null,
-	            'About 04'
+	            'About isolation'
 	        );
 	    }
 	});
@@ -24853,7 +24853,7 @@
 	        return React.createElement(
 	            'div',
 	            null,
-	            'Repos 04'
+	            'Repos isolation'
 	        );
 	    }
 	});

@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/js/";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -46,26 +46,13 @@
 
 	'use strict';
 
+	// Flux
 	var React = __webpack_require__(1);
 	var ReactDom = __webpack_require__(158);
-	var JQGrid = __webpack_require__(159);
 
-	var Main = React.createClass({
-		displayName: 'Main',
+	var TodoApp = __webpack_require__(226);
 
-		render: function render() {
-			return React.createElement(
-				'div',
-				null,
-				'Hello World'
-			);
-		}
-	});
-
-	var mydata = [{ id: '1', invdate: '2010-05-24', name: 'test', note: 'note', tax: '10.00', total: '2111.00' }, { id: '2', invdate: '2010-05-25', name: 'test2', note: 'note2', tax: '20.00', total: '320.00' }, { id: '3', invdate: '2007-09-01', name: 'test3', note: 'note3', tax: '30.00', total: '430.00' }, { id: '4', invdate: '2007-10-04', name: 'test', note: 'note', tax: '10.00', total: '210.00' }, { id: '5', invdate: '2007-10-05', name: 'test2', note: 'note2', tax: '20.00', total: '320.00' }, { id: '6', invdate: '2007-09-06', name: 'test3', note: 'note3', tax: '30.00', total: '430.00' }, { id: '7', invdate: '2007-10-04', name: 'test', note: 'note', tax: '10.00', total: '210.00' }, { id: '8', invdate: '2007-10-03', name: 'test2', note: 'note2', amount: '300.00', tax: '21.00', total: '320.00' }, { id: '9', invdate: '2007-09-01', name: 'test3', note: 'note3', amount: '400.00', tax: '30.00', total: '430.00' }, { id: '11', invdate: '2007-10-01', name: 'test', note: 'note', amount: '200.00', tax: '10.00', total: '210.00' }, { id: '12', invdate: '2007-10-02', name: 'test2', note: 'note2', amount: '300.00', tax: '20.00', total: '320.00' }, { id: '13', invdate: '2007-09-01', name: 'test3', note: 'note3', amount: '400.00', tax: '30.00', total: '430.00' }, { id: '14', invdate: '2007-10-04', name: 'test', note: 'note', amount: '200.00', tax: '10.00', total: '210.00' }, { id: '15', invdate: '2007-10-05', name: 'test2', note: 'note2', amount: '300.00', tax: '20.00', total: '320.00' }, { id: '16', invdate: '2007-09-06', name: 'test3', note: 'note3', amount: '400.00', tax: '30.00', total: '430.00' }, { id: '17', invdate: '2007-10-04', name: 'test', note: 'note', amount: '200.00', tax: '10.00', total: '210.00' }, { id: '18', invdate: '2007-10-03', name: 'test2', note: 'note2', amount: '300.00', tax: '20.00', total: '320.00' }, { id: '19', invdate: '2007-09-01', name: 'test3', note: 'note3', amount: '400.00', tax: '30.00', total: '430.00' }, { id: '21', invdate: '2007-10-01', name: 'test', note: 'note', amount: '200.00', tax: '10.00', total: '210.00' }, { id: '22', invdate: '2007-10-02', name: 'test2', note: 'note2', amount: '300.00', tax: '20.00', total: '320.00' }, { id: '23', invdate: '2007-09-01', name: 'test3', note: 'note3', amount: '400.00', tax: '30.00', total: '430.00' }, { id: '24', invdate: '2007-10-04', name: 'test', note: 'note', amount: '200.00', tax: '10.00', total: '210.00' }, { id: '25', invdate: '2007-10-05', name: 'test2', note: 'note2', amount: '300.00', tax: '20.00', total: '320.00' }, { id: '26', invdate: '2007-09-06', name: 'test3', note: 'note3', amount: '400.00', tax: '30.00', total: '430.00' }, { id: '27', invdate: '2007-10-04', name: 'test', note: 'note', amount: '200.00', tax: '10.00', total: '210.00' }, { id: '28', invdate: '2007-10-03', name: 'test2', note: 'note2', amount: '300.00', tax: '20.00', total: '320.00' }, { id: '29', invdate: '2007-09-01', name: 'test3', note: 'note3', amount: '400.00', tax: '30.00', total: '430.00' }];
-
-	ReactDom.render(React.createElement(Main, null), document.getElementById('app'));
-	ReactDom.render(React.createElement(JQGrid, { data: mydata }), document.getElementById('jqgrid'));
+	ReactDom.render(React.createElement(TodoApp, null), document.getElementById('todoapp'));
 
 /***/ },
 /* 1 */
@@ -19669,72 +19656,1606 @@
 
 
 /***/ },
-/* 159 */
+/* 159 */,
+/* 160 */,
+/* 161 */,
+/* 162 */,
+/* 163 */,
+/* 164 */,
+/* 165 */,
+/* 166 */,
+/* 167 */,
+/* 168 */,
+/* 169 */,
+/* 170 */,
+/* 171 */,
+/* 172 */,
+/* 173 */,
+/* 174 */,
+/* 175 */,
+/* 176 */,
+/* 177 */,
+/* 178 */,
+/* 179 */,
+/* 180 */,
+/* 181 */,
+/* 182 */,
+/* 183 */,
+/* 184 */,
+/* 185 */,
+/* 186 */,
+/* 187 */,
+/* 188 */,
+/* 189 */,
+/* 190 */,
+/* 191 */,
+/* 192 */,
+/* 193 */,
+/* 194 */,
+/* 195 */,
+/* 196 */,
+/* 197 */,
+/* 198 */,
+/* 199 */,
+/* 200 */,
+/* 201 */,
+/* 202 */,
+/* 203 */,
+/* 204 */,
+/* 205 */,
+/* 206 */,
+/* 207 */,
+/* 208 */,
+/* 209 */,
+/* 210 */,
+/* 211 */,
+/* 212 */,
+/* 213 */,
+/* 214 */,
+/* 215 */,
+/* 216 */,
+/* 217 */,
+/* 218 */,
+/* 219 */,
+/* 220 */,
+/* 221 */,
+/* 222 */,
+/* 223 */,
+/* 224 */,
+/* 225 */,
+/* 226 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	/**
+	 * This component operates as a "Controller-View".  It listens for changes in
+	 * the TodoStore and passes the new data to its children.
+	 */
+
+	var Footer = __webpack_require__(227);
+	var Header = __webpack_require__(235);
+	var MainSection = __webpack_require__(237);
+	var React = __webpack_require__(1);
+	var TodoStore = __webpack_require__(240);
+
+	/**
+	 * Retrieve the current TODO data from the TodoStore
+	 */
+	function getTodoState() {
+	  return {
+	    allTodos: TodoStore.getAll(),
+	    areAllComplete: TodoStore.areAllComplete()
+	  };
+	}
+
+	var TodoApp = React.createClass({
+	  displayName: 'TodoApp',
+
+
+	  getInitialState: function getInitialState() {
+	    return getTodoState();
+	  },
+
+	  componentDidMount: function componentDidMount() {
+	    TodoStore.addChangeListener(this._onChange);
+	  },
+
+	  componentWillUnmount: function componentWillUnmount() {
+	    TodoStore.removeChangeListener(this._onChange);
+	  },
+
+	  /**
+	   * @return {object}
+	   */
+	  render: function render() {
+	    return React.createElement(
+	      'div',
+	      null,
+	      React.createElement(Header, null),
+	      React.createElement(MainSection, {
+	        allTodos: this.state.allTodos,
+	        areAllComplete: this.state.areAllComplete
+	      }),
+	      React.createElement(Footer, { allTodos: this.state.allTodos })
+	    );
+	  },
+
+	  /**
+	   * Event handler for 'change' events coming from the TodoStore
+	   */
+	  _onChange: function _onChange() {
+	    this.setState(getTodoState());
+	  }
+
+	});
+
+	module.exports = TodoApp;
+
+/***/ },
+/* 227 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	/**
+	 * Copyright (c) 2014-2015, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 */
+
+	var React = __webpack_require__(1);
+	var ReactPropTypes = React.PropTypes;
+	var TodoActions = __webpack_require__(228);
+
+	var Footer = React.createClass({
+	  displayName: 'Footer',
+
+
+	  propTypes: {
+	    allTodos: ReactPropTypes.object.isRequired
+	  },
+
+	  /**
+	   * @return {object}
+	   */
+	  render: function render() {
+	    var allTodos = this.props.allTodos;
+	    var total = Object.keys(allTodos).length;
+
+	    if (total === 0) {
+	      return null;
+	    }
+
+	    var completed = 0;
+	    for (var key in allTodos) {
+	      if (allTodos[key].complete) {
+	        completed++;
+	      }
+	    }
+
+	    var itemsLeft = total - completed;
+	    var itemsLeftPhrase = itemsLeft === 1 ? ' item ' : ' items ';
+	    itemsLeftPhrase += 'left';
+
+	    // Undefined and thus not rendered if no completed items are left.
+	    var clearCompletedButton;
+	    if (completed) {
+	      clearCompletedButton = React.createElement(
+	        'button',
+	        {
+	          id: 'clear-completed',
+	          onClick: this._onClearCompletedClick },
+	        'Clear completed (',
+	        completed,
+	        ')'
+	      );
+	    }
+
+	    return React.createElement(
+	      'footer',
+	      { id: 'footer' },
+	      React.createElement(
+	        'span',
+	        { id: 'todo-count' },
+	        React.createElement(
+	          'strong',
+	          null,
+	          itemsLeft
+	        ),
+	        itemsLeftPhrase
+	      ),
+	      clearCompletedButton
+	    );
+	  },
+
+	  /**
+	   * Event handler to delete all completed TODOs
+	   */
+	  _onClearCompletedClick: function _onClearCompletedClick() {
+	    TodoActions.destroyCompleted();
+	  }
+
+	});
+
+	module.exports = Footer;
+
+/***/ },
+/* 228 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var AppDispatcher = __webpack_require__(229);
+	var TodoConstants = __webpack_require__(233);
+
+	var TodoActions = {
+
+	  /**
+	   * @param  {string} text
+	   */
+	  create: function create(text) {
+	    AppDispatcher.dispatch({
+	      actionType: TodoConstants.TODO_CREATE,
+	      text: text
+	    });
+	  },
+
+	  /**
+	   * @param  {string} id The ID of the ToDo item
+	   * @param  {string} text
+	   */
+	  updateText: function updateText(id, text) {
+	    AppDispatcher.dispatch({
+	      actionType: TodoConstants.TODO_UPDATE_TEXT,
+	      id: id,
+	      text: text
+	    });
+	  },
+
+	  /**
+	   * Toggle whether a single ToDo is complete
+	   * @param  {object} todo
+	   */
+	  toggleComplete: function toggleComplete(todo) {
+	    var id = todo.id;
+	    var actionType = todo.complete ? TodoConstants.TODO_UNDO_COMPLETE : TodoConstants.TODO_COMPLETE;
+
+	    AppDispatcher.dispatch({
+	      actionType: actionType,
+	      id: id
+	    });
+	  },
+
+	  /**
+	   * Mark all ToDos as complete
+	   */
+	  toggleCompleteAll: function toggleCompleteAll() {
+	    AppDispatcher.dispatch({
+	      actionType: TodoConstants.TODO_TOGGLE_COMPLETE_ALL
+	    });
+	  },
+
+	  /**
+	   * @param  {string} id
+	   */
+	  destroy: function destroy(id) {
+	    AppDispatcher.dispatch({
+	      actionType: TodoConstants.TODO_DESTROY,
+	      id: id
+	    });
+	  },
+
+	  /**
+	   * Delete all the completed ToDos
+	   */
+	  destroyCompleted: function destroyCompleted() {
+	    AppDispatcher.dispatch({
+	      actionType: TodoConstants.TODO_DESTROY_COMPLETED
+	    });
+	  }
+
+	};
+
+	module.exports = TodoActions;
+
+/***/ },
+/* 229 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var Dispatcher = __webpack_require__(230).Dispatcher;
+
+	module.exports = new Dispatcher();
+
+/***/ },
+/* 230 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Copyright (c) 2014-2015, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 */
+
+	module.exports.Dispatcher = __webpack_require__(231);
+
+
+/***/ },
+/* 231 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(process) {/**
+	 * Copyright (c) 2014-2015, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @providesModule Dispatcher
+	 * 
+	 * @preventMunge
+	 */
+
+	'use strict';
+
+	exports.__esModule = true;
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	var invariant = __webpack_require__(232);
+
+	var _prefix = 'ID_';
+
+	/**
+	 * Dispatcher is used to broadcast payloads to registered callbacks. This is
+	 * different from generic pub-sub systems in two ways:
+	 *
+	 *   1) Callbacks are not subscribed to particular events. Every payload is
+	 *      dispatched to every registered callback.
+	 *   2) Callbacks can be deferred in whole or part until other callbacks have
+	 *      been executed.
+	 *
+	 * For example, consider this hypothetical flight destination form, which
+	 * selects a default city when a country is selected:
+	 *
+	 *   var flightDispatcher = new Dispatcher();
+	 *
+	 *   // Keeps track of which country is selected
+	 *   var CountryStore = {country: null};
+	 *
+	 *   // Keeps track of which city is selected
+	 *   var CityStore = {city: null};
+	 *
+	 *   // Keeps track of the base flight price of the selected city
+	 *   var FlightPriceStore = {price: null}
+	 *
+	 * When a user changes the selected city, we dispatch the payload:
+	 *
+	 *   flightDispatcher.dispatch({
+	 *     actionType: 'city-update',
+	 *     selectedCity: 'paris'
+	 *   });
+	 *
+	 * This payload is digested by `CityStore`:
+	 *
+	 *   flightDispatcher.register(function(payload) {
+	 *     if (payload.actionType === 'city-update') {
+	 *       CityStore.city = payload.selectedCity;
+	 *     }
+	 *   });
+	 *
+	 * When the user selects a country, we dispatch the payload:
+	 *
+	 *   flightDispatcher.dispatch({
+	 *     actionType: 'country-update',
+	 *     selectedCountry: 'australia'
+	 *   });
+	 *
+	 * This payload is digested by both stores:
+	 *
+	 *   CountryStore.dispatchToken = flightDispatcher.register(function(payload) {
+	 *     if (payload.actionType === 'country-update') {
+	 *       CountryStore.country = payload.selectedCountry;
+	 *     }
+	 *   });
+	 *
+	 * When the callback to update `CountryStore` is registered, we save a reference
+	 * to the returned token. Using this token with `waitFor()`, we can guarantee
+	 * that `CountryStore` is updated before the callback that updates `CityStore`
+	 * needs to query its data.
+	 *
+	 *   CityStore.dispatchToken = flightDispatcher.register(function(payload) {
+	 *     if (payload.actionType === 'country-update') {
+	 *       // `CountryStore.country` may not be updated.
+	 *       flightDispatcher.waitFor([CountryStore.dispatchToken]);
+	 *       // `CountryStore.country` is now guaranteed to be updated.
+	 *
+	 *       // Select the default city for the new country
+	 *       CityStore.city = getDefaultCityForCountry(CountryStore.country);
+	 *     }
+	 *   });
+	 *
+	 * The usage of `waitFor()` can be chained, for example:
+	 *
+	 *   FlightPriceStore.dispatchToken =
+	 *     flightDispatcher.register(function(payload) {
+	 *       switch (payload.actionType) {
+	 *         case 'country-update':
+	 *         case 'city-update':
+	 *           flightDispatcher.waitFor([CityStore.dispatchToken]);
+	 *           FlightPriceStore.price =
+	 *             getFlightPriceStore(CountryStore.country, CityStore.city);
+	 *           break;
+	 *     }
+	 *   });
+	 *
+	 * The `country-update` payload will be guaranteed to invoke the stores'
+	 * registered callbacks in order: `CountryStore`, `CityStore`, then
+	 * `FlightPriceStore`.
+	 */
+
+	var Dispatcher = (function () {
+	  function Dispatcher() {
+	    _classCallCheck(this, Dispatcher);
+
+	    this._callbacks = {};
+	    this._isDispatching = false;
+	    this._isHandled = {};
+	    this._isPending = {};
+	    this._lastID = 1;
+	  }
+
+	  /**
+	   * Registers a callback to be invoked with every dispatched payload. Returns
+	   * a token that can be used with `waitFor()`.
+	   */
+
+	  Dispatcher.prototype.register = function register(callback) {
+	    var id = _prefix + this._lastID++;
+	    this._callbacks[id] = callback;
+	    return id;
+	  };
+
+	  /**
+	   * Removes a callback based on its token.
+	   */
+
+	  Dispatcher.prototype.unregister = function unregister(id) {
+	    !this._callbacks[id] ? process.env.NODE_ENV !== 'production' ? invariant(false, 'Dispatcher.unregister(...): `%s` does not map to a registered callback.', id) : invariant(false) : undefined;
+	    delete this._callbacks[id];
+	  };
+
+	  /**
+	   * Waits for the callbacks specified to be invoked before continuing execution
+	   * of the current callback. This method should only be used by a callback in
+	   * response to a dispatched payload.
+	   */
+
+	  Dispatcher.prototype.waitFor = function waitFor(ids) {
+	    !this._isDispatching ? process.env.NODE_ENV !== 'production' ? invariant(false, 'Dispatcher.waitFor(...): Must be invoked while dispatching.') : invariant(false) : undefined;
+	    for (var ii = 0; ii < ids.length; ii++) {
+	      var id = ids[ii];
+	      if (this._isPending[id]) {
+	        !this._isHandled[id] ? process.env.NODE_ENV !== 'production' ? invariant(false, 'Dispatcher.waitFor(...): Circular dependency detected while ' + 'waiting for `%s`.', id) : invariant(false) : undefined;
+	        continue;
+	      }
+	      !this._callbacks[id] ? process.env.NODE_ENV !== 'production' ? invariant(false, 'Dispatcher.waitFor(...): `%s` does not map to a registered callback.', id) : invariant(false) : undefined;
+	      this._invokeCallback(id);
+	    }
+	  };
+
+	  /**
+	   * Dispatches a payload to all registered callbacks.
+	   */
+
+	  Dispatcher.prototype.dispatch = function dispatch(payload) {
+	    !!this._isDispatching ? process.env.NODE_ENV !== 'production' ? invariant(false, 'Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch.') : invariant(false) : undefined;
+	    this._startDispatching(payload);
+	    try {
+	      for (var id in this._callbacks) {
+	        if (this._isPending[id]) {
+	          continue;
+	        }
+	        this._invokeCallback(id);
+	      }
+	    } finally {
+	      this._stopDispatching();
+	    }
+	  };
+
+	  /**
+	   * Is this Dispatcher currently dispatching.
+	   */
+
+	  Dispatcher.prototype.isDispatching = function isDispatching() {
+	    return this._isDispatching;
+	  };
+
+	  /**
+	   * Call the callback stored with the given id. Also do some internal
+	   * bookkeeping.
+	   *
+	   * @internal
+	   */
+
+	  Dispatcher.prototype._invokeCallback = function _invokeCallback(id) {
+	    this._isPending[id] = true;
+	    this._callbacks[id](this._pendingPayload);
+	    this._isHandled[id] = true;
+	  };
+
+	  /**
+	   * Set up bookkeeping needed when dispatching.
+	   *
+	   * @internal
+	   */
+
+	  Dispatcher.prototype._startDispatching = function _startDispatching(payload) {
+	    for (var id in this._callbacks) {
+	      this._isPending[id] = false;
+	      this._isHandled[id] = false;
+	    }
+	    this._pendingPayload = payload;
+	    this._isDispatching = true;
+	  };
+
+	  /**
+	   * Clear bookkeeping used for dispatching.
+	   *
+	   * @internal
+	   */
+
+	  Dispatcher.prototype._stopDispatching = function _stopDispatching() {
+	    delete this._pendingPayload;
+	    this._isDispatching = false;
+	  };
+
+	  return Dispatcher;
+	})();
+
+	module.exports = Dispatcher;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
+
+/***/ },
+/* 232 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(process) {/**
+	 * Copyright 2013-2015, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @providesModule invariant
+	 */
+
+	"use strict";
+
+	/**
+	 * Use invariant() to assert state which your program assumes to be true.
+	 *
+	 * Provide sprintf-style format (only %s is supported) and arguments
+	 * to provide information about what broke and what you were
+	 * expecting.
+	 *
+	 * The invariant message will be stripped in production, but the invariant
+	 * will remain to ensure logic does not differ in production.
+	 */
+
+	var invariant = function (condition, format, a, b, c, d, e, f) {
+	  if (process.env.NODE_ENV !== 'production') {
+	    if (format === undefined) {
+	      throw new Error('invariant requires an error message argument');
+	    }
+	  }
+
+	  if (!condition) {
+	    var error;
+	    if (format === undefined) {
+	      error = new Error('Minified exception occurred; use the non-minified dev environment ' + 'for the full error message and additional helpful warnings.');
+	    } else {
+	      var args = [a, b, c, d, e, f];
+	      var argIndex = 0;
+	      error = new Error('Invariant Violation: ' + format.replace(/%s/g, function () {
+	        return args[argIndex++];
+	      }));
+	    }
+
+	    error.framesToPop = 1; // we don't care about invariant's own frame
+	    throw error;
+	  }
+	};
+
+	module.exports = invariant;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
+
+/***/ },
+/* 233 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var keyMirror = __webpack_require__(234);
+
+	module.exports = keyMirror({
+	  TODO_CREATE: null,
+	  TODO_COMPLETE: null,
+	  TODO_DESTROY: null,
+	  TODO_DESTROY_COMPLETED: null,
+	  TODO_TOGGLE_COMPLETE_ALL: null,
+	  TODO_UNDO_COMPLETE: null,
+	  TODO_UPDATE_TEXT: null
+	});
+
+/***/ },
+/* 234 */
+/***/ function(module, exports) {
+
+	/**
+	 * Copyright 2013-2014 Facebook, Inc.
+	 *
+	 * Licensed under the Apache License, Version 2.0 (the "License");
+	 * you may not use this file except in compliance with the License.
+	 * You may obtain a copy of the License at
+	 *
+	 * http://www.apache.org/licenses/LICENSE-2.0
+	 *
+	 * Unless required by applicable law or agreed to in writing, software
+	 * distributed under the License is distributed on an "AS IS" BASIS,
+	 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	 * See the License for the specific language governing permissions and
+	 * limitations under the License.
+	 *
+	 */
+
+	"use strict";
+
+	/**
+	 * Constructs an enumeration with keys equal to their value.
+	 *
+	 * For example:
+	 *
+	 *   var COLORS = keyMirror({blue: null, red: null});
+	 *   var myColor = COLORS.blue;
+	 *   var isColorValid = !!COLORS[myColor];
+	 *
+	 * The last line could not be performed if the values of the generated enum were
+	 * not equal to their keys.
+	 *
+	 *   Input:  {key1: val1, key2: val2}
+	 *   Output: {key1: key1, key2: key2}
+	 *
+	 * @param {object} obj
+	 * @return {object}
+	 */
+	var keyMirror = function(obj) {
+	  var ret = {};
+	  var key;
+	  if (!(obj instanceof Object && !Array.isArray(obj))) {
+	    throw new Error('keyMirror(...): Argument must be an object.');
+	  }
+	  for (key in obj) {
+	    if (!obj.hasOwnProperty(key)) {
+	      continue;
+	    }
+	    ret[key] = key;
+	  }
+	  return ret;
+	};
+
+	module.exports = keyMirror;
+
+
+/***/ },
+/* 235 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	/**
+	 * Copyright (c) 2014-2015, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 */
+
+	var React = __webpack_require__(1);
+	var TodoActions = __webpack_require__(228);
+	var TodoTextInput = __webpack_require__(236);
+
+	var Header = React.createClass({
+	  displayName: 'Header',
+
+
+	  /**
+	   * @return {object}
+	   */
+	  render: function render() {
+	    return React.createElement(
+	      'header',
+	      { id: 'header' },
+	      React.createElement(
+	        'h1',
+	        null,
+	        'todos'
+	      ),
+	      React.createElement(TodoTextInput, {
+	        id: 'new-todo',
+	        placeholder: 'What needs to be done?',
+	        onSave: this._onSave
+	      })
+	    );
+	  },
+
+	  /**
+	   * Event handler called within TodoTextInput.
+	   * Defining this here allows TodoTextInput to be used in multiple places
+	   * in different ways.
+	   * @param {string} text
+	   */
+	  _onSave: function _onSave(text) {
+	    if (text.trim()) {
+	      TodoActions.create(text);
+	    }
+	  }
+
+	});
+
+	module.exports = Header;
+
+/***/ },
+/* 236 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	/**
+	 * Copyright (c) 2014-2015, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 */
+
+	var React = __webpack_require__(1);
+	var ReactPropTypes = React.PropTypes;
+
+	var ENTER_KEY_CODE = 13;
+
+	var TodoTextInput = React.createClass({
+	  displayName: 'TodoTextInput',
+
+
+	  propTypes: {
+	    className: ReactPropTypes.string,
+	    id: ReactPropTypes.string,
+	    placeholder: ReactPropTypes.string,
+	    onSave: ReactPropTypes.func.isRequired,
+	    value: ReactPropTypes.string
+	  },
+
+	  getInitialState: function getInitialState() {
+	    return {
+	      value: this.props.value || ''
+	    };
+	  },
+
+	  /**
+	   * @return {object}
+	   */
+	  render: function render() /*object*/{
+	    return React.createElement('input', {
+	      className: this.props.className,
+	      id: this.props.id,
+	      placeholder: this.props.placeholder,
+	      onBlur: this._save,
+	      onChange: this._onChange,
+	      onKeyDown: this._onKeyDown,
+	      value: this.state.value,
+	      autoFocus: true
+	    });
+	  },
+
+	  /**
+	   * Invokes the callback passed in as onSave, allowing this component to be
+	   * used in different ways.
+	   */
+	  _save: function _save() {
+	    this.props.onSave(this.state.value);
+	    this.setState({
+	      value: ''
+	    });
+	  },
+
+	  /**
+	   * @param {object} event
+	   */
+	  _onChange: function _onChange( /*object*/event) {
+	    this.setState({
+	      value: event.target.value
+	    });
+	  },
+
+	  /**
+	   * @param  {object} event
+	   */
+	  _onKeyDown: function _onKeyDown(event) {
+	    if (event.keyCode === ENTER_KEY_CODE) {
+	      this._save();
+	    }
+	  }
+
+	});
+
+	module.exports = TodoTextInput;
+
+/***/ },
+/* 237 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	/**
+	 * Copyright (c) 2014-2015, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 */
+
+	var React = __webpack_require__(1);
+	var ReactPropTypes = React.PropTypes;
+	var TodoActions = __webpack_require__(228);
+	var TodoItem = __webpack_require__(238);
+
+	var MainSection = React.createClass({
+	  displayName: 'MainSection',
+
+
+	  propTypes: {
+	    allTodos: ReactPropTypes.object.isRequired,
+	    areAllComplete: ReactPropTypes.bool.isRequired
+	  },
+
+	  /**
+	   * @return {object}
+	   */
+	  render: function render() {
+	    // This section should be hidden by default
+	    // and shown when there are todos.
+	    if (Object.keys(this.props.allTodos).length < 1) {
+	      return null;
+	    }
+
+	    var allTodos = this.props.allTodos;
+	    var todos = [];
+
+	    for (var key in allTodos) {
+	      todos.push(React.createElement(TodoItem, { key: key, todo: allTodos[key] }));
+	    }
+
+	    return React.createElement(
+	      'section',
+	      { id: 'main' },
+	      React.createElement('input', {
+	        id: 'toggle-all',
+	        type: 'checkbox',
+	        onChange: this._onToggleCompleteAll,
+	        checked: this.props.areAllComplete ? 'checked' : ''
+	      }),
+	      React.createElement(
+	        'label',
+	        { htmlFor: 'toggle-all' },
+	        'Mark all as complete'
+	      ),
+	      React.createElement(
+	        'ul',
+	        { id: 'todo-list' },
+	        todos
+	      )
+	    );
+	  },
+
+	  /**
+	   * Event handler to mark all TODOs as complete
+	   */
+	  _onToggleCompleteAll: function _onToggleCompleteAll() {
+	    TodoActions.toggleCompleteAll();
+	  }
+
+	});
+
+	module.exports = MainSection;
+
+/***/ },
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var React = __webpack_require__(1);
+	var ReactPropTypes = React.PropTypes;
+	var TodoActions = __webpack_require__(228);
+	var TodoTextInput = __webpack_require__(236);
 
-	module.exports = React.createClass({
-		displayName: 'exports',
+	var classNames = __webpack_require__(239);
 
-		componentDidMount: function componentDidMount() {
-			//var element = this.getDOMNode();
-			this.initJQueryPlugin();
-		},
-		initJQueryPlugin: function initJQueryPlugin() {
-			var element = this.getDOMNode();
-			var context = this;
-			$(element).find("#eventsgrid").jqGrid({
-				styleUI: 'Bootstrap',
-				data: this.props.data,
-				datatype: "local",
-				colNames: ['Inv No', 'Date', 'Client', 'Amount', 'Tax', 'Total', 'Notes'],
-				colModel: [{ name: 'id', index: 'id', width: 60, sorttype: 'int' }, { name: 'invdate', index: 'invdate', width: 90, sorttype: 'date', formatter: 'date' }, { name: 'name', index: 'name', width: 100, editable: true }, { name: 'amount', index: 'amount', width: 80, align: 'right', sorttype: 'float', formatter: 'number', editable: true }, { name: 'tax', index: 'tax', width: 80, align: 'right', sorttype: 'float', editable: true }, { name: 'total', index: 'total', width: 80, align: 'right', sorttype: 'float' }, { name: 'note', index: 'note', width: 150, sortable: false }],
-				rowNum: 10,
-				rowList: [10, 20, 30],
-				sortname: '',
-				viewrecords: true,
-				sortorder: "desc",
-				caption: "",
-				pager: '#eventsgridpager',
-				autowidth: true,
-				loadOnce: true,
-				scrollOffset: false,
-				height: '',
-				subGrid: false,
-				loadComplete: function loadComplete(maingrid_id) {
-					//alert(maingrid_id);
-				}
-			});
-			/*
-	  $(element).find("#eventsgrid")[0].addJSONData(this.props.eventsModel.attributes);
-	  $(element).find("#eventsgrid").jqGrid('setSelection', this.props.eventModel.attributes.title, false);
-	  */
-			//$(element).find("#eventsgrid").jqGrid('sortGrid', 'title', false, context.props.gridData.order.sortorder); Bool not fired?¿?¿¿ -> Obrir cas a tirand!!!!!!
-		},
-		componentWillUpdate: function componentWillUpdate() {
-			var element = this.findDOMNode(); //getDOMNode();
-			$(element).find("#eventsgrid").GridUnload();
-		},
-		componentDidUpdate: function componentDidUpdate(prevProps, prevState) {
-			var element = this.getDOMNode();
-			this.initJQueryPlugin();
-		},
-		componentWillUnmount: function componentWillUnmount() {
-			var element = this.getDOMNode();
-			$(element).find("#eventsgrid").GridUnload();
-		},
-		render: function render() {
-			return React.createElement(
-				'div',
-				null,
-				React.createElement('table', { id: 'eventsgrid' }),
-				React.createElement('div', { id: 'eventsgridpager' })
-			);
-		}
+	var TodoItem = React.createClass({
+	  displayName: 'TodoItem',
+
+
+	  propTypes: {
+	    todo: ReactPropTypes.object.isRequired
+	  },
+
+	  getInitialState: function getInitialState() {
+	    return {
+	      isEditing: false
+	    };
+	  },
+
+	  /**
+	   * @return {object}
+	   */
+	  render: function render() {
+	    var todo = this.props.todo;
+
+	    var input;
+	    if (this.state.isEditing) {
+	      input = React.createElement(TodoTextInput, {
+	        className: 'edit',
+	        onSave: this._onSave,
+	        value: todo.text
+	      });
+	    }
+
+	    // List items should get the class 'editing' when editing
+	    // and 'completed' when marked as completed.
+	    // Note that 'completed' is a classification while 'complete' is a state.
+	    // This differentiation between classification and state becomes important
+	    // in the naming of view actions toggleComplete() vs. destroyCompleted().
+	    return React.createElement(
+	      'li',
+	      {
+	        className: classNames({
+	          'completed': todo.complete,
+	          'editing': this.state.isEditing
+	        }),
+	        key: todo.id },
+	      React.createElement(
+	        'div',
+	        { className: 'view' },
+	        React.createElement('input', {
+	          className: 'toggle',
+	          type: 'checkbox',
+	          checked: todo.complete,
+	          onChange: this._onToggleComplete
+	        }),
+	        React.createElement(
+	          'label',
+	          { onDoubleClick: this._onDoubleClick },
+	          todo.text
+	        ),
+	        React.createElement('button', { className: 'destroy', onClick: this._onDestroyClick })
+	      ),
+	      input
+	    );
+	  },
+
+	  _onToggleComplete: function _onToggleComplete() {
+	    TodoActions.toggleComplete(this.props.todo);
+	  },
+
+	  _onDoubleClick: function _onDoubleClick() {
+	    this.setState({ isEditing: true });
+	  },
+
+	  /**
+	   * Event handler called within TodoTextInput.
+	   * Defining this here allows TodoTextInput to be used in multiple places
+	   * in different ways.
+	   * @param  {string} text
+	   */
+	  _onSave: function _onSave(text) {
+	    TodoActions.updateText(this.props.todo.id, text);
+	    this.setState({ isEditing: false });
+	  },
+
+	  _onDestroyClick: function _onDestroyClick() {
+	    TodoActions.destroy(this.props.todo.id);
+	  }
+
 	});
+
+	module.exports = TodoItem;
+
+/***/ },
+/* 239 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	  Copyright (c) 2016 Jed Watson.
+	  Licensed under the MIT License (MIT), see
+	  http://jedwatson.github.io/classnames
+	*/
+	/* global define */
+
+	(function () {
+		'use strict';
+
+		var hasOwn = {}.hasOwnProperty;
+
+		function classNames () {
+			var classes = [];
+
+			for (var i = 0; i < arguments.length; i++) {
+				var arg = arguments[i];
+				if (!arg) continue;
+
+				var argType = typeof arg;
+
+				if (argType === 'string' || argType === 'number') {
+					classes.push(arg);
+				} else if (Array.isArray(arg)) {
+					classes.push(classNames.apply(null, arg));
+				} else if (argType === 'object') {
+					for (var key in arg) {
+						if (hasOwn.call(arg, key) && arg[key]) {
+							classes.push(key);
+						}
+					}
+				}
+			}
+
+			return classes.join(' ');
+		}
+
+		if (typeof module !== 'undefined' && module.exports) {
+			module.exports = classNames;
+		} else if (true) {
+			// register as 'classnames', consistent with npm package name
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
+				return classNames;
+			}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+		} else {
+			window.classNames = classNames;
+		}
+	}());
+
+
+/***/ },
+/* 240 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var AppDispatcher = __webpack_require__(229);
+	var EventEmitter = __webpack_require__(241).EventEmitter;
+	var TodoConstants = __webpack_require__(233);
+	var assign = __webpack_require__(242);
+
+	var CHANGE_EVENT = 'change';
+
+	var _todos = {};
+
+	/**
+	 * Create a TODO item.
+	 * @param  {string} text The content of the TODO
+	 */
+	function create(text) {
+	  // Hand waving here -- not showing how this interacts with XHR or persistent
+	  // server-side storage.
+	  // Using the current timestamp + random number in place of a real id.
+	  var id = (+new Date() + Math.floor(Math.random() * 999999)).toString(36);
+	  _todos[id] = {
+	    id: id,
+	    complete: false,
+	    text: text
+	  };
+	}
+
+	/**
+	 * Update a TODO item.
+	 * @param  {string} id
+	 * @param {object} updates An object literal containing only the data to be
+	 *     updated.
+	 */
+	function update(id, updates) {
+	  _todos[id] = assign({}, _todos[id], updates);
+	}
+
+	/**
+	 * Update all of the TODO items with the same object.
+	 * @param  {object} updates An object literal containing only the data to be
+	 *     updated.
+	 */
+	function updateAll(updates) {
+	  for (var id in _todos) {
+	    update(id, updates);
+	  }
+	}
+
+	/**
+	 * Delete a TODO item.
+	 * @param  {string} id
+	 */
+	function destroy(id) {
+	  delete _todos[id];
+	}
+
+	/**
+	 * Delete all the completed TODO items.
+	 */
+	function destroyCompleted() {
+	  for (var id in _todos) {
+	    if (_todos[id].complete) {
+	      destroy(id);
+	    }
+	  }
+	}
+
+	var TodoStore = assign({}, EventEmitter.prototype, {
+
+	  /**
+	   * Tests whether all the remaining TODO items are marked as completed.
+	   * @return {boolean}
+	   */
+	  areAllComplete: function areAllComplete() {
+	    for (var id in _todos) {
+	      if (!_todos[id].complete) {
+	        return false;
+	      }
+	    }
+	    return true;
+	  },
+
+	  /**
+	   * Get the entire collection of TODOs.
+	   * @return {object}
+	   */
+	  getAll: function getAll() {
+	    return _todos;
+	  },
+
+	  emitChange: function emitChange() {
+	    this.emit(CHANGE_EVENT);
+	  },
+
+	  /**
+	   * @param {function} callback
+	   */
+	  addChangeListener: function addChangeListener(callback) {
+	    this.on(CHANGE_EVENT, callback);
+	  },
+
+	  /**
+	   * @param {function} callback
+	   */
+	  removeChangeListener: function removeChangeListener(callback) {
+	    this.removeListener(CHANGE_EVENT, callback);
+	  }
+	});
+
+	// Register callback to handle all updates
+	AppDispatcher.register(function (action) {
+	  var text;
+
+	  switch (action.actionType) {
+	    case TodoConstants.TODO_CREATE:
+	      text = action.text.trim();
+	      if (text !== '') {
+	        create(text);
+	        TodoStore.emitChange();
+	      }
+	      break;
+
+	    case TodoConstants.TODO_TOGGLE_COMPLETE_ALL:
+	      if (TodoStore.areAllComplete()) {
+	        updateAll({ complete: false });
+	      } else {
+	        updateAll({ complete: true });
+	      }
+	      TodoStore.emitChange();
+	      break;
+
+	    case TodoConstants.TODO_UNDO_COMPLETE:
+	      update(action.id, { complete: false });
+	      TodoStore.emitChange();
+	      break;
+
+	    case TodoConstants.TODO_COMPLETE:
+	      update(action.id, { complete: true });
+	      TodoStore.emitChange();
+	      break;
+
+	    case TodoConstants.TODO_UPDATE_TEXT:
+	      text = action.text.trim();
+	      if (text !== '') {
+	        update(action.id, { text: text });
+	        TodoStore.emitChange();
+	      }
+	      break;
+
+	    case TodoConstants.TODO_DESTROY:
+	      destroy(action.id);
+	      TodoStore.emitChange();
+	      break;
+
+	    case TodoConstants.TODO_DESTROY_COMPLETED:
+	      destroyCompleted();
+	      TodoStore.emitChange();
+	      break;
+
+	    default:
+	    // no op
+	  }
+	});
+
+	module.exports = TodoStore;
+
+/***/ },
+/* 241 */
+/***/ function(module, exports) {
+
+	// Copyright Joyent, Inc. and other Node contributors.
+	//
+	// Permission is hereby granted, free of charge, to any person obtaining a
+	// copy of this software and associated documentation files (the
+	// "Software"), to deal in the Software without restriction, including
+	// without limitation the rights to use, copy, modify, merge, publish,
+	// distribute, sublicense, and/or sell copies of the Software, and to permit
+	// persons to whom the Software is furnished to do so, subject to the
+	// following conditions:
+	//
+	// The above copyright notice and this permission notice shall be included
+	// in all copies or substantial portions of the Software.
+	//
+	// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+	// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+	// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+	// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+	// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+	// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+	// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+	function EventEmitter() {
+	  this._events = this._events || {};
+	  this._maxListeners = this._maxListeners || undefined;
+	}
+	module.exports = EventEmitter;
+
+	// Backwards-compat with node 0.10.x
+	EventEmitter.EventEmitter = EventEmitter;
+
+	EventEmitter.prototype._events = undefined;
+	EventEmitter.prototype._maxListeners = undefined;
+
+	// By default EventEmitters will print a warning if more than 10 listeners are
+	// added to it. This is a useful default which helps finding memory leaks.
+	EventEmitter.defaultMaxListeners = 10;
+
+	// Obviously not all Emitters should be limited to 10. This function allows
+	// that to be increased. Set to zero for unlimited.
+	EventEmitter.prototype.setMaxListeners = function(n) {
+	  if (!isNumber(n) || n < 0 || isNaN(n))
+	    throw TypeError('n must be a positive number');
+	  this._maxListeners = n;
+	  return this;
+	};
+
+	EventEmitter.prototype.emit = function(type) {
+	  var er, handler, len, args, i, listeners;
+
+	  if (!this._events)
+	    this._events = {};
+
+	  // If there is no 'error' event listener then throw.
+	  if (type === 'error') {
+	    if (!this._events.error ||
+	        (isObject(this._events.error) && !this._events.error.length)) {
+	      er = arguments[1];
+	      if (er instanceof Error) {
+	        throw er; // Unhandled 'error' event
+	      }
+	      throw TypeError('Uncaught, unspecified "error" event.');
+	    }
+	  }
+
+	  handler = this._events[type];
+
+	  if (isUndefined(handler))
+	    return false;
+
+	  if (isFunction(handler)) {
+	    switch (arguments.length) {
+	      // fast cases
+	      case 1:
+	        handler.call(this);
+	        break;
+	      case 2:
+	        handler.call(this, arguments[1]);
+	        break;
+	      case 3:
+	        handler.call(this, arguments[1], arguments[2]);
+	        break;
+	      // slower
+	      default:
+	        args = Array.prototype.slice.call(arguments, 1);
+	        handler.apply(this, args);
+	    }
+	  } else if (isObject(handler)) {
+	    args = Array.prototype.slice.call(arguments, 1);
+	    listeners = handler.slice();
+	    len = listeners.length;
+	    for (i = 0; i < len; i++)
+	      listeners[i].apply(this, args);
+	  }
+
+	  return true;
+	};
+
+	EventEmitter.prototype.addListener = function(type, listener) {
+	  var m;
+
+	  if (!isFunction(listener))
+	    throw TypeError('listener must be a function');
+
+	  if (!this._events)
+	    this._events = {};
+
+	  // To avoid recursion in the case that type === "newListener"! Before
+	  // adding it to the listeners, first emit "newListener".
+	  if (this._events.newListener)
+	    this.emit('newListener', type,
+	              isFunction(listener.listener) ?
+	              listener.listener : listener);
+
+	  if (!this._events[type])
+	    // Optimize the case of one listener. Don't need the extra array object.
+	    this._events[type] = listener;
+	  else if (isObject(this._events[type]))
+	    // If we've already got an array, just append.
+	    this._events[type].push(listener);
+	  else
+	    // Adding the second element, need to change to array.
+	    this._events[type] = [this._events[type], listener];
+
+	  // Check for listener leak
+	  if (isObject(this._events[type]) && !this._events[type].warned) {
+	    if (!isUndefined(this._maxListeners)) {
+	      m = this._maxListeners;
+	    } else {
+	      m = EventEmitter.defaultMaxListeners;
+	    }
+
+	    if (m && m > 0 && this._events[type].length > m) {
+	      this._events[type].warned = true;
+	      console.error('(node) warning: possible EventEmitter memory ' +
+	                    'leak detected. %d listeners added. ' +
+	                    'Use emitter.setMaxListeners() to increase limit.',
+	                    this._events[type].length);
+	      if (typeof console.trace === 'function') {
+	        // not supported in IE 10
+	        console.trace();
+	      }
+	    }
+	  }
+
+	  return this;
+	};
+
+	EventEmitter.prototype.on = EventEmitter.prototype.addListener;
+
+	EventEmitter.prototype.once = function(type, listener) {
+	  if (!isFunction(listener))
+	    throw TypeError('listener must be a function');
+
+	  var fired = false;
+
+	  function g() {
+	    this.removeListener(type, g);
+
+	    if (!fired) {
+	      fired = true;
+	      listener.apply(this, arguments);
+	    }
+	  }
+
+	  g.listener = listener;
+	  this.on(type, g);
+
+	  return this;
+	};
+
+	// emits a 'removeListener' event iff the listener was removed
+	EventEmitter.prototype.removeListener = function(type, listener) {
+	  var list, position, length, i;
+
+	  if (!isFunction(listener))
+	    throw TypeError('listener must be a function');
+
+	  if (!this._events || !this._events[type])
+	    return this;
+
+	  list = this._events[type];
+	  length = list.length;
+	  position = -1;
+
+	  if (list === listener ||
+	      (isFunction(list.listener) && list.listener === listener)) {
+	    delete this._events[type];
+	    if (this._events.removeListener)
+	      this.emit('removeListener', type, listener);
+
+	  } else if (isObject(list)) {
+	    for (i = length; i-- > 0;) {
+	      if (list[i] === listener ||
+	          (list[i].listener && list[i].listener === listener)) {
+	        position = i;
+	        break;
+	      }
+	    }
+
+	    if (position < 0)
+	      return this;
+
+	    if (list.length === 1) {
+	      list.length = 0;
+	      delete this._events[type];
+	    } else {
+	      list.splice(position, 1);
+	    }
+
+	    if (this._events.removeListener)
+	      this.emit('removeListener', type, listener);
+	  }
+
+	  return this;
+	};
+
+	EventEmitter.prototype.removeAllListeners = function(type) {
+	  var key, listeners;
+
+	  if (!this._events)
+	    return this;
+
+	  // not listening for removeListener, no need to emit
+	  if (!this._events.removeListener) {
+	    if (arguments.length === 0)
+	      this._events = {};
+	    else if (this._events[type])
+	      delete this._events[type];
+	    return this;
+	  }
+
+	  // emit removeListener for all listeners on all events
+	  if (arguments.length === 0) {
+	    for (key in this._events) {
+	      if (key === 'removeListener') continue;
+	      this.removeAllListeners(key);
+	    }
+	    this.removeAllListeners('removeListener');
+	    this._events = {};
+	    return this;
+	  }
+
+	  listeners = this._events[type];
+
+	  if (isFunction(listeners)) {
+	    this.removeListener(type, listeners);
+	  } else if (listeners) {
+	    // LIFO order
+	    while (listeners.length)
+	      this.removeListener(type, listeners[listeners.length - 1]);
+	  }
+	  delete this._events[type];
+
+	  return this;
+	};
+
+	EventEmitter.prototype.listeners = function(type) {
+	  var ret;
+	  if (!this._events || !this._events[type])
+	    ret = [];
+	  else if (isFunction(this._events[type]))
+	    ret = [this._events[type]];
+	  else
+	    ret = this._events[type].slice();
+	  return ret;
+	};
+
+	EventEmitter.prototype.listenerCount = function(type) {
+	  if (this._events) {
+	    var evlistener = this._events[type];
+
+	    if (isFunction(evlistener))
+	      return 1;
+	    else if (evlistener)
+	      return evlistener.length;
+	  }
+	  return 0;
+	};
+
+	EventEmitter.listenerCount = function(emitter, type) {
+	  return emitter.listenerCount(type);
+	};
+
+	function isFunction(arg) {
+	  return typeof arg === 'function';
+	}
+
+	function isNumber(arg) {
+	  return typeof arg === 'number';
+	}
+
+	function isObject(arg) {
+	  return typeof arg === 'object' && arg !== null;
+	}
+
+	function isUndefined(arg) {
+	  return arg === void 0;
+	}
+
+
+/***/ },
+/* 242 */
+/***/ function(module, exports) {
+
+	/* eslint-disable no-unused-vars */
+	'use strict';
+	var hasOwnProperty = Object.prototype.hasOwnProperty;
+	var propIsEnumerable = Object.prototype.propertyIsEnumerable;
+
+	function toObject(val) {
+		if (val === null || val === undefined) {
+			throw new TypeError('Object.assign cannot be called with null or undefined');
+		}
+
+		return Object(val);
+	}
+
+	module.exports = Object.assign || function (target, source) {
+		var from;
+		var to = toObject(target);
+		var symbols;
+
+		for (var s = 1; s < arguments.length; s++) {
+			from = Object(arguments[s]);
+
+			for (var key in from) {
+				if (hasOwnProperty.call(from, key)) {
+					to[key] = from[key];
+				}
+			}
+
+			if (Object.getOwnPropertySymbols) {
+				symbols = Object.getOwnPropertySymbols(from);
+				for (var i = 0; i < symbols.length; i++) {
+					if (propIsEnumerable.call(from, symbols[i])) {
+						to[symbols[i]] = from[symbols[i]];
+					}
+				}
+			}
+		}
+
+		return to;
+	};
+
 
 /***/ }
 /******/ ]);
