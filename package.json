@@ -8,7 +8,7 @@
     "webpack": "webpack",
     "http-server": "http-server ./ -p 3000",
     "ws": "ws -d ./ -p 3000",
-    "start": "concurrent \"npm run webpack\" \"npm run ws\" "
+    "start": "concurrent \"npm run webpack\" \"npm run http-server\" "
   },
   "author": "Ahn Hyung-Ro",
   "license": "ISC",
@@ -20,7 +20,7 @@
     "classnames": "^2.2.3",
     "concurrently": "^2.0.0",
     "flux": "^2.1.1",
-    "http-server": "^0.8.5",
+    "http-server": "^0.9.0",
     "keymirror": "^0.1.1",
     "local-web-server": "^1.1.0",
     "object-assign": "^4.0.1",
