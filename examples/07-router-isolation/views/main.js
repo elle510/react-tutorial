@@ -16,6 +16,6 @@ module.exports = React.createClass({
                     <li onClick={this.clickHandler.bind(this, "#/repo")}>Repos</li>
                 </ul>
             </div>
-        )
+        );
     }
 });

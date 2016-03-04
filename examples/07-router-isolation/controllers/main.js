@@ -7,10 +7,10 @@ var Main = require('../views/main');
 
 module.exports = React.createClass({
     onRouteClick: function(event, url) {
-        console.log(event);
-        console.log(url);
-        //browserHistory.push('#/repos');
-    },
+            console.log(event);
+            console.log(url);
+            //browserHistory.push('#/repos');
+        },
     render: function() {
         return (
             <Main onClick={this.onRouteClick}/>
