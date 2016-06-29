@@ -1,36 +1,31 @@
-// Component Specs and Lifecycle
-// Âü°í»çÀÌÆ®
-// http://reactkr.github.io/react/docs/component-specs-ko-KR.html
+'use strict';
 
 var React = require('react');
+var ReactDom = require('react-dom');
 
-module.exports = React.createClass({
-	componentWillMount: function() {
-		// ÃÖÃÊ ·»´õ¸µÀÌ ÀÏ¾î³ª±â Á÷Àü(ÇÑ¹ø È£Ãâ)
-		console.log('componentWillMount');
-    },
-    componentDidMount: function() {
-		// ÃÖÃÊ ·»´õ¸µÀÌ ÀÏ¾î³­ ´ÙÀ½(ÇÑ¹ø È£Ãâ)
-		console.log('componentDidMount');
-    },
-	componentWillReceiveProps: function(nextProps) {
-		// ÄÄÆ÷³ÍÆ®°¡ »õ·Î¿î props¸¦ ¹ŞÀ» ¶§ È£Ãâ(ÃÖÃÊ ·»´õ¸µ ½Ã¿¡´Â È£ÃâµÇÁö ¾ÊÀ½)
-		console.log('componentWillReceiveProps');
+var LifeCycle = require('./components/LifeCycle');
+
+var Main = React.createClass({
+	onClick: function() {
+		var name;
+		if(this.state.name === 'í™ê¸¸ë™') {
+			name = 'Tom';
+		}else {
+			name = 'í™ê¸¸ë™';
+		}
+		this.setState({name: name});
 	},
-    componentWillUpdate: function(nextProps, nextState){
-		// »õ·Î¿î props³ª state¸¦ ¹Ş¾ÒÀ» ¶§ ·»´õ¸µ Á÷Àü¿¡ È£Ãâ(ÃÖÃÊ ·»´õ¸µ ½Ã¿¡´Â È£ÃâµÇÁö ¾ÊÀ½)
-		console.log('componentWillUpdate');
+	getInitialState: function() {
+        return {name: 'í™ê¸¸ë™'};
     },
-    componentDidUpdate: function(prevProps, prevState) {
-		// ÄÄÆ÷³ÍÆ®ÀÇ ¾÷µ¥ÀÌÆ®°¡ DOM¿¡ ¹İ¿µµÈ Á÷ÈÄ¿¡ È£Ãâ(ÃÖÃÊ ·»´õ¸µ ½Ã¿¡´Â È£ÃâµÇÁö ¾ÊÀ½)
-		console.log('componentDidUpdate');
-    },
-    componentWillUnmount: function(){
-		// ÄÄÆ÷³ÍÆ®°¡ DOM¿¡¼­ ¸¶¿îÆ® ÇØÁ¦ µÇ±â Á÷Àü¿¡ È£Ãâ
-		console.log('componentWillUnmount');
-    },
-    render : function() {
-		// ÇÊ¼ö Ç×¸ñ
-		console.log('render');
+    render: function() {
+        return (
+        	<div>
+            	<LifeCycle name={this.state.name} />
+            	<button onClick={this.onClick}>change</button>
+            </div>
+        )
     }
 });
+
+ReactDom.render(<Main />, document.getElementById('app'));

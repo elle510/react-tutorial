@@ -9,8 +9,10 @@ module.exports = React.createClass({
     onRouteClick: function(event, url) {
             console.log(event);
             console.log(url);
-            //browserHistory.push('#/repos');
+            //browserHistory.push('/repos');
+            browserHistory.push(url);
         },
+
     render: function() {
         return (
             <Main onClick={this.onRouteClick}/>
