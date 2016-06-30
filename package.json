@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack",
-    "http-server": "http-server ./ -p 3000",
+    "http-server": "http-server ./ -p 3000 -o /index.html",
     "ws": "ws -d ./ -p 3000",
     "start": "concurrent \"npm run webpack\" \"npm run http-server\" "
   },
