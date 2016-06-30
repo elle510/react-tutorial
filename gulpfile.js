@@ -3,6 +3,7 @@
 var gulp = require('gulp');
 var webpack = require('gulp-webpack');
 var webpackConfig = require('./webpack.config.js');
+var webpackConfigEx = require('./examples/webpack.config.js');
 
 var del = require('del');
 
@@ -16,4 +17,14 @@ gulp.task('build', ['clean'], function() {
 		.pipe(gulp.dest('build/'));
 });
 
-gulp.task('default', ['build']);
+gulp.task('example.clean', function() {
+    return del('examples/js/*.js');
+});
+
+gulp.task('example', ['example.clean'], function() {
+	return gulp.src('./src/app.js')
+		.pipe(webpack(webpackConfigEx))
+		.pipe(gulp.dest('examples/js/'));
+});
+
+gulp.task('default', ['build', 'example']);
