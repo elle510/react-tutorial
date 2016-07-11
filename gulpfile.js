@@ -27,4 +27,8 @@ gulp.task('example', ['example.clean'], function() {
 		.pipe(gulp.dest('examples/js/'));
 });
 
+gulp.task('watch', function() {
+	gulp.watch(['examples/**/*.js', '!examples/js/*.js'], ['example']);
+});
+
 gulp.task('default', ['build', 'example']);
