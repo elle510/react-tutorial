@@ -20,24 +20,6 @@ var TodoTextInput = React.createClass({
   },
 
   /**
-   * @return {object}
-   */
-  render: function() /*object*/ {
-    return (
-      <input
-        className={this.props.className}
-        id={this.props.id}
-        placeholder={this.props.placeholder}
-        onBlur={this._save}
-        onChange={this._onChange}
-        onKeyDown={this._onKeyDown}
-        value={this.state.value}
-        autoFocus={true}
-      />
-    )
-  },
-
-  /**
    * Invokes the callback passed in as onSave, allowing this component to be
    * used in different ways.
    */
@@ -64,6 +46,24 @@ var TodoTextInput = React.createClass({
     if (event.keyCode === ENTER_KEY_CODE) {
       this._save();
     }
+  },
+
+  /**
+   * @return {object}
+   */
+  render: function() /*object*/ {
+    return (
+      <input
+        className={this.props.className}
+        id={this.props.id}
+        placeholder={this.props.placeholder}
+        onBlur={this._save}
+        onChange={this._onChange}
+        onKeyDown={this._onKeyDown}
+        value={this.state.value}
+        autoFocus={true}
+      />
+    )
   }
 
 });

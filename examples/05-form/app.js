@@ -19,7 +19,7 @@ var Main = React.createClass({
             <div>
                 <span style={{fontWeight: 'bold'}}>Input text</span>
                 <br/>
-                <input type="text" value="abc" readOnly />{'\u00A0'}
+                <input type="text" value="abc"  />{'\u00A0'}
                 <input type="text" />{'\u00A0'}
                 <input type="text" value={this.state.value} onChange={this.onChange} />{'\u00A0'}
                 <input type="text" defaultValue="Hello!" />

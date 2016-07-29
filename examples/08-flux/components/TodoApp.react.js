@@ -21,6 +21,13 @@ function getTodoState() {
 
 var TodoApp = React.createClass({
 
+  /**
+   * Event handler for 'change' events coming from the TodoStore
+   */
+  _onChange: function() {
+    this.setState(getTodoState());
+  },
+
   getInitialState: function() {
     return getTodoState();
   },
@@ -47,13 +54,6 @@ var TodoApp = React.createClass({
         <Footer allTodos={this.state.allTodos} />
       </div>
     )
-  },
-
-  /**
-   * Event handler for 'change' events coming from the TodoStore
-   */
-  _onChange: function() {
-    this.setState(getTodoState());
   }
 
 });

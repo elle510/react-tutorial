@@ -6,9 +6,9 @@ var ReactDom = require('react-dom');
 
 var Main = React.createClass({
 	onClick: function(event) {
-		console.log('onClick');
-		console.log(event);
-	},
+			console.log('onClick');
+			console.log(event);
+		},
 	onDoubleClick: function(event) {
 		console.log('onDoubleClick');
 		console.log(event);
