@@ -47,15 +47,22 @@ var LifeCycle = React.createClass({
     },
 	componentWillReceiveProps: function(nextProps) {
 		// 컴포넌트가 새로운 props를 받을 때 호출(최초 렌더링 시에는 호출되지 않음)
-		console.log('6.componentWillReceiveProps');
+		console.log('6. componentWillReceiveProps');
 	},
+	shouldComponentUpdate: function(nextProps, nextState) {
+        // 새로운 props나 state를 받았을 때 렌더링 전에 호출(최초 렌더링 시에는 호출되지 않음)
+        console.log('7. shouldComponentUpdate');
+
+        // false 면 render 호출하지 않음(componentWillUpdate 와 componentDidUpdate 역시 호출되지 않음)
+        return true;    // default true
+    },
     componentWillUpdate: function(nextProps, nextState) {
 		// 새로운 props나 state를 받았을 때 렌더링 직전에 호출(최초 렌더링 시에는 호출되지 않음)
-		console.log('7.componentWillUpdate');
+		console.log('8.componentWillUpdate');
     },
     componentDidUpdate: function(prevProps, prevState) {
 		// 컴포넌트의 업데이트가 DOM에 반영된 직후에 호출(최초 렌더링 시에는 호출되지 않음)
-		console.log('9.componentDidUpdate');
+		console.log('10.componentDidUpdate');
     },
     componentWillUnmount: function(){
 		// 컴포넌트가 DOM에서 마운트 해제 되기 직전에 호출
