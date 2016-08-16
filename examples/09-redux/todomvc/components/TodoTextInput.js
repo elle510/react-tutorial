@@ -3,29 +3,29 @@ import classnames from 'classnames';
 
 class TodoTextInput extends Component {
   constructor(props, context) {
-    super(props, context)
+    super(props, context);
     this.state = {
       text: this.props.text || ''
     }
   }
 
   handleSubmit(e) {
-    const text = e.target.value.trim()
+    const text = e.target.value.trim();
     if (e.which === 13) {
-      this.props.onSave(text)
+      this.props.onSave(text);
       if (this.props.newTodo) {
-        this.setState({ text: '' })
+        this.setState({ text: '' });
       }
     }
   }
 
   handleChange(e) {
-    this.setState({ text: e.target.value })
+    this.setState({ text: e.target.value });
   }
 
   handleBlur(e) {
     if (!this.props.newTodo) {
-      this.props.onSave(e.target.value)
+      this.props.onSave(e.target.value);
     }
   }
 

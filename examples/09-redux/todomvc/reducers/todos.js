@@ -6,7 +6,7 @@ const initialState = [
     completed: false,
     id: 0
   }
-]
+];
 
 export default function todos(state = initialState, action) {
   switch (action.type) {
