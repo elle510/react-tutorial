@@ -32,3 +32,6 @@ ReactDOM.render(
     </Provider>,
     document.getElementById('todoapp')
 );
+
+// Async Actions
+import AsyncActions from './async-actions/app';
