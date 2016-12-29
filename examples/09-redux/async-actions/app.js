@@ -30,6 +30,17 @@ const reducer = (state = initialState, action) => {
     }
 }
 
+/*
+const loggerMiddleware = logger();
+
+const createStoreWithMiddleware = applyMiddleware(
+  thunk, // 함수를 dispatch() 하게 해줍니다
+  loggerMiddleware // 액션을 로깅하는 깔끔한 미들웨어입니다
+)(createStore);
+
+const store = createStoreWithMiddleware(reducer);
+*/
+
 const middleware = applyMiddleware(thunk, logger());
 const store = createStore(reducer, middleware);
 
