@@ -11,14 +11,15 @@
 /docs/.next
 /docs/export
 /examples/**/.cache
-/packages/material-ui-codemod/lib
-/packages/material-ui-envinfo/*.tgz
-/packages/material-ui-icons/material-icons/*
-/test/regressions/build
-/test/regressions/screenshots
-/test/selenium-output
 /tmp
 build
 node_modules
 package-lock.json
 size-snapshot.json
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+dist
